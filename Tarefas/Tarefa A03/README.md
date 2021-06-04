@@ -14,3 +14,5 @@
 
 1. Não utilizem frameworks.
 2. Não insiram código CSS explicitamente dentro do arquivo HTML, mas apenas dentro do arquivo style.css.
+
+![img.png](img_1.png)
