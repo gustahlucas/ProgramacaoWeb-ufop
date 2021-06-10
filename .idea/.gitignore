@@ -3,3 +3,5 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# Ignorar todos os arquivos e sub-pastas da pasta Aula/
+Aula/
