@@ -1,5 +1,5 @@
 # Tarefa - A05 - CSS 
-#Tarefa: 
+# Tarefa: 
 - Crie o arquivo css correspondente e o preencha de modo a se obter uma página parecida com a da imagem abaixo. 
   As alturas e larguras provavelmente serão diferentes das do exemplo, pois não estou fornecendo a vocês as especificações exatas, mas a aparência geral da página deve se aproximar do exemplo.
 
