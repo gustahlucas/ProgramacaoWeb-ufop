@@ -1,0 +1,24 @@
+header{
+    background-color: lightskyblue;
+}
+header nav{
+    padding-bottom: 30px;
+    background-color: orange;
+}
+main article section{
+    text-align: center;
+    background-color: gray;
+    margin: 50px 200px;
+    border-radius: 15px;
+}
+footer{
+    text-align: center;
+    background-color: black;
+}
+.contact{
+    background-color: gray;
+    margin: 0px 200px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+}
