@@ -1,0 +1,33 @@
+* {
+    margin: 20;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: medium;
+}
+h1{
+    width: 440px;
+    height: 50px;
+    color: white;
+    background: black;
+}
+.image{
+    max-width: 400px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+}
+.button-troca{
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    background: #111;
+    border-radius: 10px;
+    font-size: larger;
+}
