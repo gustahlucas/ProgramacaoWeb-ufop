@@ -5,7 +5,40 @@
  *
  * http://cs193x.stanford.edu
  */
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, label{
+    color: white;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+li a {
+    padding: 10px;
+    display: block;
+}
+h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+.navigation {
+    background-color: rgb(54, 179, 168);
+}
+.showmenu {
+    display: none;
+}
+.navigation__list {
+    display: flex;
+}
+#btnHamb {
+    display: none;
+}
 a {
     cursor: pointer;
 }
@@ -29,13 +62,8 @@ body {
     font-size: 16px;
     margin: 0;
 }
-a:link, a:visited, a:active{
-    text-decoration: none;
-}
 a:hover{
-    text-decoration: underline;
-    color: #000;
-    background: #ff0;
+    background: aquamarine;
 }
 @media (max-width: 500px) {
     body {
@@ -44,9 +72,10 @@ a:hover{
 }
 
 .button,
-#details h1,
+.details h1,
 footer address,
 header h1 strong,
+#navigation,
 #links {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -55,31 +84,58 @@ header h1 strong,
 }
 header h1 strong{
     text-shadow: 0.1em 0.1em 0.2em black;
-    font-style: italic;
+    font-style: normal;
 }
 
-#details {
+.details {
     display: flex;
     justify-content: space-between;
 }
 
 @media (max-width: 500px) {
-    #details {
+    .details{
         flex-direction: column;
+    }
+    .navigation__list {
+        flex-direction: column;
+    }
+    .navigation__list li {
+        vertical-align: center;
+        flex: 2;
+    }
+    .navigation__list li a {
+        border-bottom: 1px solid;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .showmenu {
+        font-size: 50px;
+        display: block;
+        text-align: right;
+        padding: 10px;
+    }
+    #btnHamb:checked ~ #showmenu {
+        transition: all .5s;
+        height: 30vh;
+    }
+
+    #showmenu {
+        transition: all .5s;
+        height: 0;
     }
 }
 
-#details div {
+.details div {
     flex-grow: 1;
     padding: 20px;
 }
 
-#details img {
+.details img{
     max-width: 100%;
     height: auto;
 }
 
-#details h1 {
+.details h1 {
     color: yellowgreen;
     font-weight: normal;
     letter-spacing: 2px;
@@ -109,7 +165,7 @@ h1 a.button {
     border: none;
     background-color: rgb(54, 179, 168);
     display: inline-block;
-    color:#fff;
+    color:white;
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
     transition: opacity 1s ease-in-out;
@@ -119,7 +175,6 @@ h1 a.button {
 
 h1 a.button:hover {
     background-color: rgba(54, 179, 168, 0.75);
-    /* In this case, I'm using inherit to ignore the other :hover rule I set. */
     color: inherit;
 }
 
@@ -206,24 +261,9 @@ header nav {
     align-items: center;
 }
 
-#menu {
-    display: none;
-}
-#menu div{
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-}
-
-
 @media (max-width: 500px) {
     #links {
         display: none;
-    }
-
-    #menu {
-        display: block;
     }
 }
 

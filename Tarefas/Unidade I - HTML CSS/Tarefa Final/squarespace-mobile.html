@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,31 +9,22 @@
   <link rel="stylesheet" href="squarespace-mobile-style.css">
 </head>
 <body>
+<div class="navigation">
+  <label for="btnHamb" class="showmenu">&#9776</label>
+  <input type="checkbox" id="btnHamb">
+  <ul class="navigation__list" id="showmenu">
+    <li><a href="#Historia">Sobre</a></li>
+    <li><a href="#Tipos">Tipos</a></li>
+    <li><a href="#Beneficios">Benefícios para Saúde</a></li>
+    <li><a href="#Imagens">Imagens</a></li>
+  </ul>
+</div>
 <header>
-  <nav>
-    <div id="logo">
-
-    </div>
-
-    <div id="links">
-      <a href = "#Historia" class="button">Sobre</a>
-      <a href="#Tipos" class="button">Tipos</a>
-      <a href="#Beneficios" class="button">Benefícios para Saúde</a>
-    </div>
-    <div id="menu">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </nav>
-
-  <h1>
+   <h1>
     <strong>Caminhada</strong><br/>
     <em> O poder e a beleza do corpo em movimento</em>
     <a href = "#Historia" class="button">Saiba mais</a>
-
   </h1>
-
 </header>
 
 <!--Seção sobre A ATIVIDADE FISICA -->
@@ -51,9 +42,9 @@
 <!--Seção sobre OS TIPOS-->
 <section>
   <h1 id="Tipos">Tipos</h1>
-  <div id="details">
+  <div class="details">
     <div>
-      <img src="images/body-image-1.jpg" />
+      <img src="images/body-image-1.jpg" alt="Pessoa caminhando em um ambiente aberto" />
       <h1>Caminhada Ambiente</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea. Viverra orci sagittis eu volutpat.
@@ -62,7 +53,7 @@
       </p>
     </div>
     <div>
-      <img src="images/body-image-2.jpg" />
+      <img src="images/body-image-2.jpg" alt="Pessoa se exercitando em uma esteira"/>
       <h1>Caminhada em Esteira</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra tellus in hac habitasse platea. Viverra orci sagittis eu volutpat. Scelerisque eleifend donec pretium vulputate sapien.
@@ -109,6 +100,23 @@
         São inúmeros os benefícios da caminhada.
         O fato é que o corpo em movimento é o principal  aliado de quem deseja mais qualidade de vida e saúde.
       </p>
+    </div>
+  </div>
+</section>
+<section>
+  <h1 id="Imagens">Imagens</h1>
+  <div class="details">
+    <div>
+      <img src="images/image-imagens-3.jpg" alt="pessoa caminhando" />
+    </div>
+    <div>
+      <img src="images/image-imagens-2.jpg" alt="pessoa caminhando"/>
+    </div>
+    <div>
+      <img src="images/image-imagens-3.jpg" alt="pessoa caminhando"/>
+    </div>
+    <div>
+      <img src="images/image-imagens-2.jpg" alt="pessoa caminhando"/>
     </div>
   </div>
 </section>
