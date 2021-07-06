@@ -27,13 +27,13 @@ h2 {
     text-align: center;
     margin-top: 100px;
 }
-.navigation {
+.navegacao {
     background-color: rgb(54, 179, 168);
 }
 .showmenu {
     display: none;
 }
-.navigation__list {
+.navegacao__lista {
     display: flex;
 }
 #btnHamb {
@@ -74,8 +74,7 @@ a:hover{
 .button,
 .details h1,
 footer address,
-header h1 strong,
-#navigation,
+header h1 strong, .navegacao,
 #links {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -96,14 +95,14 @@ header h1 strong{
     .details{
         flex-direction: column;
     }
-    .navigation__list {
+    .navegacao__lista {
         flex-direction: column;
     }
-    .navigation__list li {
+    .navegacao__lista li {
         vertical-align: center;
         flex: 2;
     }
-    .navigation__list li a {
+    .navegacao__lista li a {
         border-bottom: 1px solid;
         width: 50%;
         margin: 0 auto;
