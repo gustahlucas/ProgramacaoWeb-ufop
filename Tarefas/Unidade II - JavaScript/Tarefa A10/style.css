@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: Montserrat, serif;
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+header h1, main p{
+    margin: 20px;
+    text-shadow: 0.1em 0.1em 0.2em palevioletred;
+    font-style: normal;
+}
+footer{
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    padding: 50px;
+    width: 100%;
+}
+footer p{
+    font-style: italic;
+    margin: 8px;
+}
+main img{
+    margin: 20px;
+    max-width: 100%;
+    width: 250px;
+}
