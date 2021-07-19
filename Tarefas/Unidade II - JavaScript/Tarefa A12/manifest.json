@@ -1,0 +1,17 @@
+{
+    "name": "Substituição de Imagens em paginas .br",
+    "version": "1.0",
+    "description": "Uma extensão que muda as imagens de um site com url .br para uma imagem do poster da Viuva Negra ",
+    "content_scripts": [
+      {
+        "matches": ["*://*.br/*"],
+        "js": ["roteiro.js"]
+      }
+    ],
+    "icons": {
+      "16": "viuva-negra.png",
+      "48": "viuva-negra.png",
+      "128": "viuva-negra.png"
+    },
+    "manifest_version": 2
+}
