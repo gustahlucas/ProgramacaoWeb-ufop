@@ -15,9 +15,9 @@ function changeImage(images){
     images[i].height = height;
   }
 }
-function countImage(image){
+function countImage(images){
   let imageCount = document.createElement('h1');
-  imageCount.textContent = 'Número de imagens na página: ' + image.length;
+  imageCount.textContent = 'Número de imagens na página: ' + images.length;
   imageCount.id = 'image-count';
   imageCount.style.color = 'orange';
   imageCount.style.fontSize = '4em';
