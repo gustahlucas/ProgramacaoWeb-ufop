@@ -1,8 +1,8 @@
 # Tarefa - A16 - Classes 
 ###### A partir dos códigos a seguir:
 
-- **(Ex das Pizzas)**: [Codepen - Pizzas] (https://codepen.io/bee-arcade/project/editor/AbJmLA)
-- **(Ex dos Presentes)**: [Codepen - Presentes] (https://codepen.io/bee-arcade/project/editor/XqGzeD)
+- **(Ex das Pizzas)**: [Codepen - Pizzas](https://codepen.io/bee-arcade/project/editor/AbJmLA)
+- **(Ex dos Presentes)**: [Codepen - Presentes](https://codepen.io/bee-arcade/project/editor/XqGzeD)
 
 **Faça o seguinte**:
 
