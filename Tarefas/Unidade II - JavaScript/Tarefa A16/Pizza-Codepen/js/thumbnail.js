@@ -3,11 +3,11 @@ class Thumbnail {
         this.index = index;
         this.onThumbClick = onThumbClick;
 
-        this._onClick = this._onClick.bind(this);
+        this.onClick = this.onClick.bind(this);
 
         this.image = document.createElement('img');
         this.image.src = src;
-        this.image.addEventListener('pointerup', this._onClick);
+        this.image.addEventListener('pointerup', this.onClick);
     }
 
     renderTo(element) {
@@ -18,7 +18,7 @@ class Thumbnail {
         this.image.remove();
     }
 
-    _onClick() {
+    onClick() {
         this.onThumbClick(this.index, this.image.src);
     }
 }

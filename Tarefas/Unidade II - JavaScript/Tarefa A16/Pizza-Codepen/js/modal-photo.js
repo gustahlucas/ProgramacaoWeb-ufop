@@ -3,16 +3,16 @@ class ModalPhoto {
         this.onSwipeNext = onSwipeNext;
         this.onSwipePrev = onSwipePrev;
 
-        this._startDrag = this._startDrag.bind(this);
-        this._duringDrag = this._duringDrag.bind(this);
-        this._endDrag = this._endDrag.bind(this);
+        this.startDrag = this.startDrag.bind(this);
+        this.duringDrag = this.duringDrag.bind(this);
+        this.endDrag = this.endDrag.bind(this);
 
         this.image = document.createElement('img');
         this.image.src = src;
-        this.image.addEventListener('pointerdown', this._startDrag);
-        this.image.addEventListener('pointermove', this._duringDrag);
-        this.image.addEventListener('pointerup', this._endDrag);
-        this.image.addEventListener('pointercancel', this._endDrag);
+        this.image.addEventListener('pointerdown', this.startDrag);
+        this.image.addEventListener('pointermove', this.duringDrag);
+        this.image.addEventListener('pointerup', this.endDrag);
+        this.image.addEventListener('pointercancel', this.endDrag);
 
         this.originX = null;
     }
@@ -34,7 +34,7 @@ class ModalPhoto {
         this.image.style.transform = '';
     }
 
-    _startDrag(event) {
+    startDrag(event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -42,7 +42,7 @@ class ModalPhoto {
         event.target.setPointerCapture(event.pointerId);
     }
 
-    _duringDrag(event) {
+    duringDrag(event) {
         if (this.originX) {
             const currentX = event.clientX;
             const delta = currentX - this.originX;
@@ -51,7 +51,7 @@ class ModalPhoto {
         }
     }
 
-    _endDrag(event) {
+    endDrag(event) {
         if (!this.originX) {
             return;
         }

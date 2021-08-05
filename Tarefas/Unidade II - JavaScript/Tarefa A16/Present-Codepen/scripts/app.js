@@ -3,21 +3,22 @@ class App {
         this.presentContainer = presentContainer;
         this.titleContainer = titleContainer;
 
-        this._onPresentOpened = this._onPresentOpened.bind(this);
+        this.onPresentOpened = this.onPresentOpened.bind(this);
 
         this.presents = [];
-        this._fillPresentContainer();
+        this.#fillPresentContainer();
         this.openedCount = 0;
     }
 
-    _fillPresentContainer() {
+    #fillPresentContainer() {
         for (const source of PRESENT_SOURCES) {
-            const present = new Present(this.presentContainer, source, this._onPresentOpened);
+            const present = new Present(this.presentContainer, source, this.onPresentOpened);
             this.presents.push(present);
         }
     }
 
-    _onPresentOpened() {
+    onPresentOpened() {
+        console.log(this);
         this.openedCount++;
         if (this.openedCount === this.presents.length) {
             this.titleContainer.textContent = 'Enjoy your presents!';

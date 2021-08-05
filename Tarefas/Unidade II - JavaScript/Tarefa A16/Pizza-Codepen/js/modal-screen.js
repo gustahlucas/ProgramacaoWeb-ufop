@@ -5,11 +5,11 @@ class ModalScreen {
         this.currentIndex = -1;
         this.currentModalPhoto = null;
 
-        this._showNextPhoto = this._showNextPhoto.bind(this);
-        this._showPrevPhoto = this._showPrevPhoto.bind(this);
-        this._onModalClick = this._onModalClick.bind(this);
+        this.showNextPhoto = this.showNextPhoto.bind(this);
+        this.showPrevPhoto = this.showPrevPhoto.bind(this);
+        this.onModalClick = this.onModalClick.bind(this);
 
-        this.containerElement.addEventListener('pointerdown', this._onModalClick);
+        this.containerElement.addEventListener('pointerdown', this.onModalClick);
     }
 
     clear() {
@@ -31,14 +31,14 @@ class ModalScreen {
         if (this.currentModalPhoto) {
             this.currentModalPhoto.remove();
         }
-        this.currentModalPhoto = new ModalPhoto(src, this._showNextPhoto, this._showPrevPhoto);
+        this.currentModalPhoto = new ModalPhoto(src, this.showNextPhoto, this.showPrevPhoto);
         this.currentModalPhoto.renderTo(this.containerElement, entranceStyle);
 
         this.containerElement.style.top = window.pageYOffset + 'px';
         this.containerElement.classList.remove('hidden');
     }
 
-    _showNextPhoto() {
+    showNextPhoto() {
         if (this.currentIndex + 1 === this.photoPaths.length) {
             this.currentModalPhoto.snapToPlace();
         } else {
@@ -46,7 +46,7 @@ class ModalScreen {
         }
     }
 
-    _showPrevPhoto() {
+    showPrevPhoto() {
         if (this.currentIndex === 0) {
             this.currentModalPhoto.snapToPlace();
         } else {
@@ -54,7 +54,7 @@ class ModalScreen {
         }
     }
 
-    _onModalClick() {
+    onModalClick() {
         this.clear();
         this.hide();
     }
